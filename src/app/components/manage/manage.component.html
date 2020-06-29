@@ -1,0 +1,21 @@
+<p>Choose any product from: ICE, CUST, SAND, CAKE, MILKS </p>
+<div class="demo-grid-1 mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <form style="margin-bottom: 5px;" (submit)="add()">
+      <input name="currentproduct" [(ngModel)]="currentproduct" class="mdl-textfield__input" type="text" placeholder="Add Product" />
+    </form>
+    <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp" style="width: 100%;">
+      <tbody>
+      <tr *ngFor="let code of codeArray">
+        <td class="mdl-data-table__cell--non-numeric">{{code}}</td>
+        <td style="padding-top: 6px;">
+          <button class="mdl-button" (click)="remove(code)">Remove</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+

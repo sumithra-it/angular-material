@@ -1,0 +1,8 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col" *ngIf="!productsMenu" style="text-align: center;">
+    Loading. Please wait while we communicate to the backend service.
+  </div>
+  <div class="mdl-cell mdl-cell--3-col" *ngFor="let prod of productsMenu">
+    <app-summary [product]="prod"></app-summary>
+  </div>
+</div>
